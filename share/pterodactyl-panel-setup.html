@@ -1,21 +1,28 @@
-Game Panel:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Panel</title>
+</head>
+<body>
+<pre>
 ------------------------------------------------|
 ----------------Subscribe to Neluxe--------|
 ------------------------------------------------|
- 
+
 Making Folders (panel):
- 
+
 mkdir pterodactyl
- 
+
 cd pterodactyl
- 
+
 mkdir panel
- 
+
 cd panel
- 
+
 nano docker-compose.yml
- 
- 
+
 version: '3.8'
 x-common:
   database:
@@ -96,12 +103,16 @@ networks:
     ipam:
       config:
         - subnet: 172.20.0.0/16
- 
- 
-Start the Panel:
+
+
+       Start the Panel:
  
 docker-compose up -d
  
 Create a user for the panel:
  
 docker-compose run --rm panel php artisan p:user:make
+
+</pre>
+</body>
+</html>
